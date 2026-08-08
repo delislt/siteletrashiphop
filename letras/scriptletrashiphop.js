@@ -1,3 +1,9 @@
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.9/+esm";
+
+const SUPABASE_URL = 'https://mnckoegfzjhzqtcazjkb.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_Vi8tsIjVMcfnFstUBgYu8Q_HGuz2MxW';
+const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
 // Ip grabber
 async function obterIP() {
     try {
@@ -10,12 +16,6 @@ async function obterIP() {
         return null;
     }
 }
-
-// Create a single supabase client for interacting with your database
-const supabase = createClient('https://qjxdlwzugeurfkdrzaov.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFqeGRsd3p1Z2V1cmZrZHJ6YW92Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzA4OTY4NTAsImV4cCI6MjA0NjQ3Mjg1MH0.heeFBtzQwHSGHU88HMkeZftDG5IlltTFUBqq-DadTec')
-import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
-
-// Agora, o supabase está configurado e disponível para uso no seu script.js
 
 let isAdmin = false;
 const letrasContainer = document.getElementById('letrasContainer');
